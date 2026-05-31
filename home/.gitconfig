@@ -1,3 +1,5 @@
+[core]
+        excludesFile = ~/.gitignore
 [user]
         name = Hubert Lee 🤖
         email = hube@users.noreply.github.com
