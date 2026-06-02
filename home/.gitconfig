@@ -1,5 +1,12 @@
+[commit]
+        gpgSign = true
 [core]
         excludesFile = ~/.gitignore
+[gpg]
+        format = ssh
+[gpg "ssh"]
+        allowedSignersFile = ~/.ssh/allowed_signers
 [user]
         name = Hubert Lee 🤖
         email = hube@users.noreply.github.com
+        signingKey = ~/.ssh/id_ed25519.pub
