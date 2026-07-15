@@ -1,6 +1,6 @@
 # Worktree Guidance Design
 
-Status: Approved for implementation
+Status: Implemented; awaiting pull-request review
 
 ## Scope
 
@@ -50,4 +50,3 @@ Verify the tracked ignore rule with `git check-ignore -v` against nested and
 top-level `.worktrees` paths using `home/.gitignore` as the excludes file.
 Review the final `CLAUDE.md` for internal contradictions and confirm that each
 approved rule appears once in the appropriate procedural section.
-
