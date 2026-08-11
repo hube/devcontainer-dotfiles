@@ -1,0 +1,8 @@
+# The Superpowers writing-plans skill's default output location. Plans are
+# working files, not repository content. The plans directory only, not all of
+# docs/superpowers/ — anything else the plugin writes there should surface as
+# untracked noise rather than vanish silently.
+#
+# home/.gitignore carries the same entry for the global gitignore this repo
+# installs; this one is what holds when the repository is cloned elsewhere.
+docs/superpowers/plans/
