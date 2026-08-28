@@ -12,3 +12,17 @@
         name = Hubert Lee 🤖
         email = hube@users.noreply.github.com
         signingKey = ~/.ssh/id_ed25519.pub
+
+# Attribution is keyed to the GitHub account that owns the remote. The default
+# identity above serves hube repositories, where agents commit as co-authors;
+# the include below replaces it for hube-ai repositories, where agents are the
+# primary author. Both URL forms are listed because a clone's remote may be
+# either, and hasconfig matches the URL as configured.
+[includeIf "hasconfig:remote.*.url:git@github.com:hube-ai/**"]
+        path = ~/.config/git/identity-hube-ai.inc
+[includeIf "hasconfig:remote.*.url:https://github.com/hube-ai/**"]
+        path = ~/.config/git/identity-hube-ai.inc
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/hube-ai/**"]
+        path = ~/.config/git/identity-hube-ai.inc
+[includeIf "hasconfig:remote.*.url:https://*@github.com/hube-ai/**"]
+        path = ~/.config/git/identity-hube-ai.inc
