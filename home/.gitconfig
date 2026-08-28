@@ -22,3 +22,7 @@
         path = ~/.config/git/identity-hube-ai.inc
 [includeIf "hasconfig:remote.*.url:https://github.com/hube-ai/**"]
         path = ~/.config/git/identity-hube-ai.inc
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/hube-ai/**"]
+        path = ~/.config/git/identity-hube-ai.inc
+[includeIf "hasconfig:remote.*.url:https://*@github.com/hube-ai/**"]
+        path = ~/.config/git/identity-hube-ai.inc

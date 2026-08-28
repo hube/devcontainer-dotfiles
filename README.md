@@ -13,7 +13,7 @@ See additional information about this feature with `devcontainer up --help`
 ## Git identities
 
 Commits are attributed to one of two GitHub accounts, chosen automatically by
-the account that owns the remote of the repository being committed to:
+the accounts owning the repository's remotes:
 
 - **`hube`** — the default, and what every repository outside `hube-ai` uses.
 - **`hube-ai`** — repositories under that account, where an agent is the primary
@@ -22,6 +22,12 @@ the account that owns the remote of the repository being committed to:
 The choice is a conditional include in `.gitconfig` keyed on the remote URL, so
 a clone is attributed correctly from the moment it exists and there is no
 per-repository step to remember.
+
+**The scope is the repository, not the remote.** A single `hube-ai` remote
+selects that identity for the whole repository, including operations against
+any other remote it holds — git offers no per-remote identity. **Keep one
+account's remotes to a clone**: a clone holding both commits and pushes as
+`hube-ai` against both.
 
 **Each identity signs with its own key, and a signature verifies only against
 the account that key is registered to.** GitHub resolves a commit's signature
